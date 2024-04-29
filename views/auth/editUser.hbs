@@ -1,0 +1,81 @@
+{{>header}}
+
+<!-- Hero Start -->
+<div class="container-fluid pt-5 bg-primary hero-header">
+    <div class="container pt-5">
+        <div class="row g-5 pt-5">
+            <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                <h1 class="display-4 text-white mb-4 animated slideInRight">Edit-User</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
+                        <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Edit-User</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-lg-6 align-self-end text-center text-lg-end">
+                <img class="img-fluid" src="img/hero-img.png" alt="" style="max-height: 300px;">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+
+<section>
+    <div class="container">
+        {{#if message}}
+        <div class="alert alert-{{message.type}} alert-dismissible fade show" role="alert">
+            <p>{{message.message}}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {{/if}}
+        <div class="form" id="edit-form">
+            <div class="login w-50 p-5 border rounded">
+                <div class="row">
+                    <div class="col-4 mb-3 border border-2 rounded p-2">
+                        <img src="/uploads/{{Profile}}" class="w-100">
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-4"></div>
+                </div>
+                <form action="/edit-user" method="post" enctype="multipart/form-data">
+                    <div class="form-group mb-3">
+                        <label for="Name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="Name" name="Name" minlength="2" value="{{Name}}"
+                            required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="Email" name="Email" value="{{Email}}" readonly required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Phone" class="form-label">Phone</label>
+                        <input type="tel" placeholder="Ex. +91 9876543210" pattern="\+91 \d{10}" class="form-control"
+                            id="Phone" value="{{Phone}}" name="Phone" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Profile" class="form-label">Profile Photo</label>
+                        <input type="file" class="form-control" id="Profile" name="Profile" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="Address" name="Address" value="{{Address}}"
+                            required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="Password-edit" name="Password"
+                            value="{{Password}}" minlength="8" required>
+                        <i class="fa fa-eye" id="edit-fa"></i>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="submit" value="Save" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{>footer}}

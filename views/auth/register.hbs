@@ -1,0 +1,72 @@
+{{>header}}
+<!-- Hero Start -->
+<div class="container-fluid pt-5 bg-primary hero-header">
+    <div class="container pt-5">
+        <div class="row g-5 pt-5">
+            <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                <h1 class="display-4 text-white mb-4 animated slideInRight">Register</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
+                        <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Features</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-lg-6 align-self-end text-center text-lg-end">
+                <img class="img-fluid" src="img/hero-img.png" alt="" style="max-height: 300px;">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+
+<section>
+    <div class="container">
+        {{#if message}}
+        <div class="alert alert-{{message.type}} alert-dismissible fade show " role="alert">
+            <p>{{message.message}}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {{/if}}
+        <div class="form ">
+            <div class="login w-50 p-5 border rounded ">
+                <form action="/register-admin" method="post" enctype="multipart/form-data">
+                    <div class="form-group mb-3">
+                        <label for="Name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="Name" name="Name" minlength="2" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Email" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="Email" name="Email" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Phone" class="form-label">Phone</label>
+                        <input type="tel" pattern="\+91 \d{10}" class="form-control" id="Phone" name="Phone"
+                            placeholder="+91 9876543210" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Profile" class="form-label">Profile Photo</label>
+                        <input type="file" class="form-control" id="Profile" name="Profile" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="Address" name="Address" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Password" class="form-label">Password</label>
+                        <input type="Password" class="form-control" id="Password" name="Password" minlength="8"
+                            required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="submit" value="Register" class="btn btn-primary">
+                    </div>
+
+                    <p class="text-muted mb-2">Already have an account: <a href="/login">Login</a></p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{{>footer}}

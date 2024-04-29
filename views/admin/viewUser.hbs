@@ -1,0 +1,47 @@
+{{>admin_header}}
+
+<main>
+    <div class="container">
+        <div class="row">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center">Key</th>
+                        <th class="text-center">Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-title="Name" class="text-center"><b>Profile</b></td>
+                        <td data-title="Value" class="text-center"><img src="/uploads/{{currentUser.Profile}}" alt="" style="width: 100px;"></td>
+                    </tr>
+                    <tr>
+                        <td data-title="Name" class="text-center"><b>Name</b></td>
+                        <td data-title="Value" class="text-center">{{currentUser.Name}}</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Email" class="text-center"><b>Email</b></td>
+                        <td data-title="Value" class="text-center">{{currentUser.Email}}</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Email" class="text-center"><b>Phone</b></td>
+                        <td data-title="Value" class="text-center">{{currentUser.Phone}}</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Email" class="text-center"><b>Address</b></td>
+                        <td data-title="Value" class="text-center">{{currentUser.Address}}</td>
+                    </tr>
+                    <tr>
+                        <td data-title="Email" class="text-center"><b>Password</b></td>
+                        <td data-title="Value" class="text-center">{{currentUser.Password}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="/my-admin/viewUser?id={{PrevId}}" class="th_btn mx-auto">Prev</a>
+            <a href="/edit-data/{{currentUser._id}}" class="th_btn mx-auto">Edit</a>
+            <a href="/my-admin/viewUser?id={{NextId}}" class="th_btn mx-auto">Next</a>
+        </div>
+    </div>
+</main>
+
+{{>admin_footer}}

@@ -1,0 +1,19 @@
+to show all the databases
+-> show dbs 
+To select database
+-> use database_name
+
+// database -> collection -> data
+
+install mongoose
+-> npm i mongoose
+
+require
+-> const mongoose = require("mongoose");
+
+connect with database
+-> mongoose.connect('mongodb://127.0.0.1:27017');
+
+collections me schema banenge
+create your own schemas
+

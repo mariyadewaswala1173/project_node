@@ -1,0 +1,252 @@
+{{>admin_header}}
+{{!-- {{#if}}
+<p class="alert alert-success">{{message}}</p>
+{{/if}} --}}
+    <div class="dashboard_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-4">
+                    <div class="flt_left">
+                        <div class="left_side">
+                            <a href="javascript:void(0);" class="closeasidebar">
+                                <i class="icon feather icon-arrow-right"></i>
+                            </a>
+                            <div class="flt_leftInnr">
+                                <div class="admin_info text-center mb-4">
+                                    <div class="user_img">
+                                        <img src="/uploads/{{myProfile.Profile}}" alt="" />
+                                    </div>
+                                    <div class="user_name mb-3">
+                                        <h4>{{myProfile.Name}}</h4>
+                                    </div>
+                                    <div class="tags mb-2">
+                                        <a href="#" class="badge badge-primary">Featured</a>
+                                        <a href="#" class="badge badge-success">Verified</a>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="icon feather icon-star text-warning"></i>
+                                        <i class="icon feather icon-star text-warning"></i>
+                                        <i class="icon feather icon-star text-warning"></i>
+                                        <i class="icon feather icon-star text-warning"></i>
+                                        <i class="icon feather icon-star"></i>
+                                    </div>
+                                </div>
+                                <div class="admin_menus">
+                                    <ul>
+                                        <li class="active">
+                                            <a href="javascript:void(0)" onclick="changeView('Dash')"><i
+                                                    class="icon feather icon-box"></i>Dashboard</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" onclick="changeView('User')"><i
+                                                    class="icon feather icon-shopping-cart"></i>User Data</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" onclick="changeView('Profile')"><i
+                                                    class="icon feather icon-user"></i>Profile</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" onclick="changeView('Note')"><i
+                                                    class="icon feather icon-bell"></i>Notifications</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" onclick="changeView('Sett')"><i
+                                                    class="icon feather icon-settings"></i>Settings</a>
+                                        </li>
+                                        <li>
+                                            <a href="/my-admin/logout"><i
+                                                    class="icon feather icon-log-out"></i>Logout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-8 adminActive admin_hide admin_show" id="Dash">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
+                            <div class="box">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <i class="icon feather icon-mail"></i>
+                                    </div>
+                                    <div class="col pl-0">
+                                        <h3>24 Unread</h3>
+                                        <p>New Messages</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
+                            <div class="box">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <i class="icon feather icon-users"></i>
+                                    </div>
+                                    <div class="col pl-0">
+                                        <h3>32,706</h3>
+                                        <p>Profile Visits</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
+                            <div class="box">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <i class="icon feather icon-repeat"></i>
+                                    </div>
+                                    <div class="col pl-0">
+                                        <h3>16 Days left</h3>
+                                        <p>Package Expiry</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3>Job List</h3>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Sr. No.</th>
+                                        <th>Job Id</th>
+                                        <th>Name</th>
+                                        <th>Requred Details</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-title="Sr. No.">1</td>
+                                        <td data-title="Job ID">3562</td>
+                                        <td data-title="Name"><strong>Accountants</strong><br>09/10/2020 18:25:11</td>
+                                        <td data-title="Requred Details">hello , this is testing</td>
+                                        <td data-title="Action">
+                                            <a href="javascript:void(0);" class="th_btn">Reply/Available Services</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="Sr. No.">1</td>
+                                        <td data-title="Job ID">3562</td>
+                                        <td data-title="Name"><strong>Accountants</strong><br>09/10/2020 18:25:11</td>
+                                        <td data-title="Requred Details">hello , this is testing</td>
+                                        <td data-title="Action">
+                                            <a href="javascript:void(0);" class="th_btn">Reply/Available Services</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="Sr. No.">1</td>
+                                        <td data-title="Job ID">3562</td>
+                                        <td data-title="Name"><strong>Accountants</strong><br>09/10/2020 18:25:11</td>
+                                        <td data-title="Requred Details">hello , this is testing</td>
+                                        <td data-title="Action">
+                                            <a href="javascript:void(0);" class="th_btn">Reply/Available Services</a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-8 adminActive admin_hide" id="User">
+                    <div class="row">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Operation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each myusers}}
+                                <tr>
+                                    <td data-title="Id">{{@index}}</td>
+                                    <td data-title="Profile"><img src="/uploads/{{this.Profile}}" style="width: 100px;" alt=""></td>
+                                    <td data-title="Name">{{this.Name}}</td>
+                                    <td data-title="Email">{{this.Email}}</td>
+                                    <td data-title="Phone">{{this.Phone}}</td>
+                                    <td data-title="Action">
+                                        <a href="/my-admin/viewUser?id={{this._id}}" class="th_btn">View</a>
+                                        <a href="/my-admin/deleteuser?id={{this._id}}" onclick="return confirm('Are you sure?')" class="th_btn">Delete</a>
+                                    </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-8 adminActive admin_hide" id="Profile">
+                    <div class="row">
+                        Profile
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-8 adminActive admin_hide" id="Note">
+                    <div class="row">
+                        Nofitications
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-8 adminActive admin_hide" id="Sett">
+                    <div class="row">
+                        Settings
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stay_connect">
+        <div class="container">
+            <div class="stay_connect_box" data-aos="fade-up" data-aos-duration="1100">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <h3>Stay Connected</h3>
+                        <p>Subscribe to Our Newsletter to get Important News, Amazing Offers & Inside Scoops:</p>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="form-group pl-0 pl-lg-5">
+                            <input type="text" class="form-control" name="" placeholder="Enter Your Email...">
+                            <button type="button" class="th_btn"><i class="icon feather icon-send"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mbl_bottom">
+        <ul>
+            <li class="active">
+                <a href="javascript:void(0);">
+                    <i class="icon feather icon-home"></i>
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="icon feather icon-calendar"></i>
+                    Booking
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="icon feather icon-info"></i>
+                    Get Help
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="icon feather icon-user"></i>
+                    Profile
+                </a>
+            </li>
+        </ul>
+    </div>
+
+  {{>admin_footer}}
